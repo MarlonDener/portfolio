@@ -8,14 +8,16 @@ const GlobalStyled = createGlobalStyle`
     --border-color: #2e344e;
     --background-light-color: #F1F1F1;
     --background-light-color-2: rgba(3, 127, 255, .3);
-    --white-color: #FFF;
+    --white-color: #fff;
     --font-light-color: #a4acc4;
     --font-dark-color: #313131;
     --font-dark-color-2: #151515;
     --sidebar-dark-color: #0f111a;
     --text: #ebebeb;
+    --text2: #b3b4b5;
     --text-strong: #dfdfdf;
     --background-grey:#08070d;
+    --medium-grey: #0c0d14;
   }
 
   * {
@@ -42,7 +44,6 @@ html::-webkit-scrollbar-track {
   body {
     background-color: var(--background-dark-color);
     color: var(--font-light-color);
-    font-size: 62.3%;
   }
    p {
      font-size: 1rem;

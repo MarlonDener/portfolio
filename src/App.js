@@ -1,15 +1,21 @@
-import "./App.css";
 import styled from "styled-components";
 import HomePage from "./Pages/HomePage";
 import Sidebar from "./components/Sidebar";
 import About from "./Pages/About/index";
 import Resume from "./Pages/Resume/index";
+import Blogs from "./Pages/Blogs/index";
 import Portfolios from "./Pages/Portfolios/index";
 import Contato from "./Pages/Contact/index";
 import { Switch, Route } from "react-router-dom";
+import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 function App() {
   return (
     <GlobalApp>
+      {/*
+        <Whatsapp>
+          <WhatsAppIcon fontSize={"large"} style={{ color: "#5df255" }} />
+        </Whatsapp>
+        */}
       <Sidebar />
       <MainContentStyled>
         <div className="lines">
@@ -28,6 +34,9 @@ function App() {
           <Route path="/resume" exact>
             <Resume />
           </Route>
+          <Route path="/blogs" exact>
+            <Blogs />
+          </Route>
           <Route path="/portfolio" exact>
             <Portfolios />
           </Route>
@@ -40,13 +49,19 @@ function App() {
   );
 }
 const GlobalApp = styled.div``;
+const Whatsapp = styled.div`
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+`;
 const MainContentStyled = styled.main`
   position: relative;
-  margin-left: 16.3rem;
+  margin-left: 15rem;
   min-height: 100vh;
   z-index: 3;
 
   .lines {
+    z-index: -1;
     position: absolute;
     min-height: 100vh;
     width: 100%;
