@@ -18,7 +18,7 @@ export default Title;
 const TitleStyled = styled.div`
   position: relative;
   h2 {
-    color: var(--white-color);
+    color: #fff;
     font-size: 3.8rem;
     font-weight: 600;
     text-transform: uppercase;
