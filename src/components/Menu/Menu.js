@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import GitHub from "@material-ui/icons/GitHub";
-import Pinterest from "@material-ui/icons/Pinterest";
 
 const Menu = ({ menuItem }) => {
   return (
@@ -9,37 +8,51 @@ const Menu = ({ menuItem }) => {
       {menuItem.map((item) => {
         return (
           <div class="grid-item" key={item.id}>
-            <div className="portfolio-content">
-              <div className="portfolio-image">
-                <img src={item.image} alt={item.title} />
+            <LinkForGit href="#">
+              <div className="portfolio-content">
+                <div className="portfolio-image">
+                  <img src={item.image} alt={item.title} />
+                </div>
+                <ul>
+                  <li>
+                    <a href={item.link1}>
+                      <GitHub fontSize={"medium"} />
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <ul>
-                <li>
-                  <a href={item.link1}>
-                    <GitHub />
-                  </a>
-                </li>
-                <li>
-                  <a href={item.link2}>
-                    <Pinterest />
-                  </a>
-                </li>
-              </ul>
+            </LinkForGit>
+            <div class="about_project">
+              <h6>{item.title}</h6>
+              <p>{item.text}</p>
             </div>
-            <h6>{item.title}</h6>
-            <p>{item.text}</p>
           </div>
         );
       })}
     </MenuItemStyled>
   );
 };
+const LinkForGit = styled.a``;
 
 const MenuItemStyled = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   .grid-item {
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent;
+    transition: 0.3s ease-in;
+    box-shadow: 0.3rem 0.6rem 2rem 0.2rem rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    &:hover {
+      background-color: #000;
+      border-color: var(--primary-color);
+      box-shadow: 0.3rem 0.6rem 2rem 0.2rem var(--primary-color);
+    }
+    &:hover img {
+      opacity: 0.7;
+    }
     .portfolio-content {
       display: block;
       position: relative;
@@ -50,27 +63,22 @@ const MenuItemStyled = styled.div`
         object-fit: cover;
       }
       ul {
-        display: none;
-      }
-      .portfolio-image {
-        position: relative;
-      }
-      .portfolio-image::before {
-        content: "";
-        position: absolute;
-        left: 15px;
-        top: 15px;
-        height: calc(100% - 30px);
-        width: calc(100% - 30px);
-        background-color: #fff;
-        opacity: 0.9;
-        transform-origin: 0;
-        transform: scale(0);
-        transition: all 0.4s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.4rem 0;
       }
     }
     h6 {
-      font-size: 1.5rem;
+      font-size: 1.1rem;
+      padding: 5px 0;
+    }
+    .about_project {
+      padding: 5px 15px;
+    }
+    p {
+      font-size: 0.95rem;
+      padding-bottom: 0.7rem;
     }
   }
 `;
