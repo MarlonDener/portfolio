@@ -16,22 +16,64 @@ const ResumePart = () => {
     <ResumeStyled>
       <Title title={"Resume"} span={"Resume"} />
       <InnerLayout>
-        <SmallTitle icon={business} title={"Businnes"} />
+        <div className="small-title">
+          <SmallTitle icon={business} title={"Formação acadêmica"} />
+        </div>
+
         <div className="resume-content">
           <ResumeItem
             year={"2015 - 2018"}
             title={"Análise de Sistemas"}
             subTitle={"Universidade Nove de Julho"}
             text={
-              "Lorem ipsum dolor sit amligendi temporibus a perferendis esse, modi reprehenderit numquam, necessitatibus aut hic velit, sint soluta vel! Sit nobis exercitationem ipsum."
+              "Lorem ipsum dolor sit amligendi temporibus a perferendis esse, modi reprehenderit numquam,prehenderit numqprehenderit numqprehenderit numq necessitatibus aut hic velit, sint soluta vel! Sit nobis exercitationem ipsum."
+            }
+          />
+          <ResumeItem
+            year={"2015 - 2018"}
+            title={"Análise de Sistemas"}
+            subTitle={"Universidade Nove de Julho"}
+            text={
+              "Lorem ipsum dolor sit amligendi temporibus a perferendis esse, modi reprehenderit numquam,prehenderit numqprehenderit numqprehenderit numq necessitatibus aut hic velit, sint soluta vel! Sit nobis exercitationem ipsum."
+            }
+          />
+          <ResumeItem
+            year={"2015 - 2018"}
+            title={"Análise de Sistemas"}
+            subTitle={"Universidade Nove de Julho"}
+            text={
+              "Lorem ipsum dolor sit amligendi temporibus a perferendis esse, modi reprehenderit numquam,prehenderit numqprehenderit numqprehenderit numq necessitatibus aut hic velit, sint soluta vel! Sit nobis exercitationem ipsum."
             }
           />
         </div>
 
-        <SmallTitle icon={schol} title={"Formação"} />
+        <SmallTitle icon={schol} title={"Experiência em tecnologia"} />
+        <ResumeItem
+          year={"2015 - 2018"}
+          title={"Análise de Sistemas"}
+          subTitle={"Universidade Nove de Julho"}
+          text={
+            "Lorem ipsum dolor sit amligendi temporibus a perferendis esse, modi reprehenderit numquam,prehenderit numqprehenderit numqprehenderit numq necessitatibus aut hic velit, sint soluta vel! Sit nobis exercitationem ipsum."
+          }
+        />
+        <ResumeItem
+          year={"2015 - 2018"}
+          title={"Análise de Sistemas"}
+          subTitle={"Universidade Nove de Julho"}
+          text={
+            "Lorem ipsum dolor sit amligendi temporibus a perferendis esse, modi reprehenderit numquam,prehenderit numqprehenderit numqprehenderit numq necessitatibus aut hic velit, sint soluta vel! Sit nobis exercitationem ipsum."
+          }
+        />
       </InnerLayout>
     </ResumeStyled>
   );
 };
-const ResumeStyled = styled.div``;
+const ResumeStyled = styled.div`
+  .small-title {
+    padding-bottom: 3rem;
+  }
+  .resume-content {
+    border-left: 2px solid var(--border-color);
+  }
+`;
 export default ResumePart;

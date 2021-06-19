@@ -26,7 +26,7 @@ const Navigation = () => {
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/porfolios" activeClassName="active-class" exact>
+          <NavLink to="/portfolios" activeClassName="active-class" exact>
             Porfólio
           </NavLink>
         </li>
