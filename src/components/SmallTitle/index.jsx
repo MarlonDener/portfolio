@@ -13,9 +13,15 @@ const SmallTitle = ({ icon, title }) => {
 const SmallTitleStyled = styled.div`
   display: flex;
   align-items: center;
+  &:not(:first-child) {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+  }
   p {
     padding-right: 1.2rem;
-    font-size: 50px;
+    svg {
+      font-size: 3rem;
+    }
   }
   h3 {
     color: var(--white-color);
