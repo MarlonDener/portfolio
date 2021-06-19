@@ -54,6 +54,12 @@ html::-webkit-scrollbar-track {
       text-decoration: none;
       font-size: 1rem;
   }
+  h6{
+    color: var(--white-color);
+  }
+  .margin_bottom{
+    margin-bottom: 3rem;
+  }
 `;
 
 export default GlobalStyled;

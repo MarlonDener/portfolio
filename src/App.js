@@ -37,7 +37,7 @@ function App() {
           <Route path="/blogs" exact>
             <Blogs />
           </Route>
-          <Route path="/portfolio" exact>
+          <Route path="/portfolios" exact>
             <Portfolios />
           </Route>
           <Route path="/contato" exact>
