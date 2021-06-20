@@ -43,6 +43,9 @@ const SkillsStyled = styled.div`
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 2rem;
     grid-column-gap: 3rem;
+    @media (max-width: 700px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 `;
 

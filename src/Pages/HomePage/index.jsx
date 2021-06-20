@@ -4,11 +4,11 @@ import styled from "styled-components";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import GithubIcon from "@material-ui/icons/GitHub";
 import LinkedinIcon from "@material-ui/icons/LinkedIn";
-const HomePage = () => {
+const HomePage = ({ colorParticles, Format }) => {
   return (
     <HomePageStyled>
       <div className="particle-con">
-        <Particle />
+        <Particle color={colorParticles} Format={Format} />
       </div>
       <div className="typography">
         <h1>
@@ -20,13 +20,13 @@ const HomePage = () => {
           molestias neque adipisci odio
         </p>
         <div className="icons">
-          <a href="#" className="icon i-facebook">
+          <a href="/" className="icon i-facebook">
             <FacebookIcon />
           </a>
-          <a href="#" className="icon i-github">
+          <a href="/" className="icon i-github">
             <GithubIcon />
           </a>
-          <a href="#" className="icon i-youtube">
+          <a href="/" className="icon i-youtube">
             <LinkedinIcon />
           </a>
         </div>
@@ -36,9 +36,11 @@ const HomePage = () => {
 };
 
 const HomePageStyled = styled.header`
+  overflow: hidden;
   width: 100%;
   height: 100vh;
   position: relative;
+
   .p-particles-js {
   }
   .typography {
@@ -51,16 +53,26 @@ const HomePageStyled = styled.header`
     h1 {
       font-size: 3rem;
       color: var(--white-color);
+      @media (max-width: 800px) {
+        font-size: 2.5rem;
+      }
+      @media (max-width: 502px) {
+        font-size: 1.9rem;
+      }
       span {
         color: var(--primary-color);
         font-size: 2.3rem;
         filter: brightness(1.2);
+        @media (max-width: 502px) {
+          font-size: 1.7rem;
+        }
       }
     }
 
     P {
       font-size: 1rem;
       margin: 15px 0px;
+      color: var(--text2);
     }
     .icons {
       display: flex;

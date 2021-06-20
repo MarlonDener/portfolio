@@ -49,6 +49,12 @@ const ServicesSectionStyled = styled.section`
     display: flex;
     justify-content: space-between;
     margin: 2.8rem 0;
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      .margin {
+        margin: 20px 0;
+      }
+    }
   }
   .margin {
     margin: 0px 1rem;

@@ -18,18 +18,19 @@ const ResumeItem = ({ year, title, subTitle, text }) => {
 const ResumeItemStyled = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   &:not(:last-child) {
     padding-bottom: 3rem;
   }
   .left-content {
-    width: 30%;
+    width: 40%;
     padding-left: 20px;
     position: relative;
     &::before {
       content: "";
       position: absolute;
       left: -11px;
-      top: 7px;
+      top: 4px;
       height: 15px;
       width: 15px;
       border-radius: 50%;
@@ -37,35 +38,38 @@ const ResumeItemStyled = styled.div`
       background-color: var(--primary-color);
     }
     p {
-      display: inline-block;
+      display: block;
+      @media (max-width: 700px) {
+        font-size: 15px;
+      }
     }
   }
 
   .right-content {
-    padding-left: 7rem;
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 15px;
-      height: 3px;
-      left: 30px;
-      width: 3rem;
-      background-color: var(--border-color);
-    }
+    padding-left: 2rem;
+
     h5 {
       color: var(--primary-color);
       font-size: 2rem;
       padding-bottom: 0.4rem;
+      @media (max-width: 700px) {
+        font-size: 1.5rem;
+      }
     }
     h6 {
       padding-bottom: 0.6rem;
       font-size: 1.3rem;
       color: var(--white-color);
+      @media (max-width: 700px) {
+        font-size: 1rem;
+      }
     }
     p {
       color: var(--text2);
       font-size: 0.95rem;
+      @media (max-width: 700px) {
+        font-size: 0.85rem;
+      }
     }
   }
 `;

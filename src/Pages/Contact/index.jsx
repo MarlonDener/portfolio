@@ -21,7 +21,7 @@ const Contact = () => {
         <InnerLayout className={"contact-section"}>
           <div className="left-container">
             <div className="contact-title">
-              <h4>Entre em contato</h4>
+              <h4>Envie sua mensagem:</h4>
             </div>
             <form className="form">
               <div className="form-field">
@@ -82,6 +82,10 @@ const ContactPageStyled = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 2rem;
+    @media (max-width: 978px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
     .rigth-content {
       display: flex;
       flex-direction: column;
@@ -89,10 +93,13 @@ const ContactPageStyled = styled.div`
     .contact-title {
       h4 {
         color: var(--white-color);
-        padding: 1rem 0;
+        padding-top: 20px;
         font-size: 1.5rem;
         position: relative;
         top: -40px;
+        @media (max-width: 978px) {
+          top: -10px;
+        }
       }
     }
 

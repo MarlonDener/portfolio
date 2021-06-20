@@ -49,6 +49,9 @@ export default ImageSection;
 const ImageSectionStyled = styled.div`
   margin-top: 4rem;
   display: flex;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
   .right-content {
     .about-info {
       display: flex;
@@ -71,6 +74,7 @@ const ImageSectionStyled = styled.div`
     .about-info {
       display: flex;
       padding-bottom: 1.5rem;
+      align-items: center;
       .info-title {
         padding-right: 3rem;
         font-weight: 700;
@@ -90,9 +94,13 @@ const ImageSectionStyled = styled.div`
   }
   .left-content {
     width: 100%;
+    @media (max-width: 1000px) {
+      display: none;
+      visibility: hidden;
+    }
     img {
-      z-index: 10;
       height: 90%;
+      z-index: 10;
       position: relative;
       width: 83%;
       border-top-right-radius: 30px;

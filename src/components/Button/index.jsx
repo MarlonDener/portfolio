@@ -21,7 +21,8 @@ const ButtonStyled = styled.button`
   background-color: var(--primary-color);
   padding: 0.4rem 2rem;
   color: var(--white-color);
-  margin: 0 7px;
+  margin: 10px 7px;
+  min-width: 185px;
   box-shadow: 0.5rem 0.4rem 0.9rem 0.2rem rgba(0, 0, 0, 0.6);
   cursor: pointer;
   border: 2px solid transparent;
@@ -44,7 +45,7 @@ const ButtonsStyled = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 70%;
+  width: 100%;
   margin: 2.4rem auto;
 `;
 

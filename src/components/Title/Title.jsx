@@ -17,6 +17,7 @@ export default Title;
 
 const TitleStyled = styled.div`
   position: relative;
+
   h2 {
     color: #fff;
     font-size: 3.8rem;
@@ -34,6 +35,16 @@ const TitleStyled = styled.div`
       z-index: -1;
     }
   }
+  @media (max-width: 700px) {
+    h2 {
+      font-size: 2.5rem;
+      word-wrap: normal;
+      span {
+        font-size: 3.4rem;
+      }
+    }
+  }
+
   h2::before {
     content: "";
     position: absolute;

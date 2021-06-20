@@ -20,8 +20,26 @@ const PrimaryButtonStyled = styled.a`
   display: inline-block;
   font-size: inherit;
   text-transform: uppercase;
+  text-align: center;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   cursor: pointer;
+  @media (max-width: 800px) {
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    font-size: 20px;
+    padding: 0.5rem 3rem;
+    width: 80%;
+  }
+  @media (max-width: 400px) {
+    font-size: 20px;
+    width: 80%;
+    padding: 0.5rem 2rem;
+  }
 
   transition: all 0.3s ease-in-out;
   &::after {

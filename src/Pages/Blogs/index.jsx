@@ -37,11 +37,17 @@ const BlogsStyled = styled.div`
     padding: 2rem 1rem 0.5rem 1rem;
     gap: 15px;
     width: 100%;
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }
     .blog-item {
       width: 48%;
       padding: 1rem 1rem 0.5rem 1.5rem;
       background-color: var(--background-grey);
       overflow: hidden;
+      @media (max-width: 800px) {
+        width: 100%;
+      }
     }
     .title {
       width: 100%;

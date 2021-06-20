@@ -1,7 +1,7 @@
 import Particles from "react-particles-js";
 import React from "react";
 
-function Particle() {
+function Particle(props) {
   return (
     <>
       <Particles
@@ -16,23 +16,26 @@ function Particle() {
                 value_area: 1200,
               },
             },
+            color: {
+              value: props.color,
+            },
             shape: {
-              type: "circle",
+              type: props.Format,
               stroke: {
                 width: 0,
               },
               polygon: {
-                nb_sides: 12,
+                nb_sides: 30,
               },
             },
             line_linked: {
               enable: true,
               distance: 150,
-              opacity: 0.1,
-              width: 0.3,
+              opacity: 0.3,
+              width: 0.1,
               shadow: {
                 enable: true,
-                color: "#e74c3c",
+                color: "#1818d9",
                 blur: 5,
               },
             },

@@ -52,7 +52,7 @@ const NavigationStyled = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 100%;
   width: 100%;
   border-right: 1px solid var(--border-color);
@@ -85,6 +85,7 @@ const NavigationStyled = styled.nav`
       }
       a:hover {
         cursor: pointer;
+        color: var(--white-color);
       }
       a {
         display: block;
@@ -106,6 +107,7 @@ const NavigationStyled = styled.nav`
         transition: all 0.4s cubic-bezier(1, -0.2, 0.25, 0.95);
         opacity: 0.21;
         transform-origin: bottom;
+        z-index: -1;
       }
       a:hover::before {
         width: 100%;

@@ -29,6 +29,12 @@ export default ReviewSection;
 
 const ReviewStyled = styled.div`
   .reviews {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    @media (max-width: 600px) {
+      flex-direction: column;
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 `;
